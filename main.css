@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url(/assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 900;
+}
+
+:root {
+  /* colors */
+  --yellow: hsl(47, 88%, 63%);
+  --gray-950: hsl(0, 0%, 7%);
+  --gray-500: hsl(0, 0%, 42%);
+  --white: hsl(0, 0%, 100%);
+
+  /* spacing */
+  --space-300: 24px;
+  --space-150: 12px;
+  --space-100: 8px;
+  --space-50: 4px;
+
+  /* typography */
+  --figtree-extra-bold: 800;
+  --figtree-medium: 500;
+  --figtree-preset-1: var(--figtree-extra-bold) 24px/150% 'Figtree', sans-serif;
+  --figtree-preset-2: var(--figtree-medium) 16px/150% 'Figtree', sans-serif;
+  --figtree-preset-3: var(--figtree-medium) 14px/150% 'Figtree', sans-serif;
+  --figtree-preset-3-bold: var(--figtree-extra-bold) 14px/150% 'Figtree',
+    sans-serif;
+  /* font presets */
+  --font-preset-1: var(--figtree-preset-1);
+  --font-preset-2: var(--figtree-preset-2);
+  --font-preset-3: var(--figtree-preset-3);
+  --font-preset-3-bold: var(--figtree-preset-3-bold);
+  /* additional font properties */
+  --font-optical-sizing: auto;
+  --font-style: normal;
+  --letter-spacing: 0px;
+}
+
+/* font presets */
+.text-preset-1 {
+  font: var(--font-preset-1);
+  font-optical-sizing: var(--font-optical-sizing);
+  font-style: var(--font-style);
+  letter-spacing: var(--letter-spacing);
+  color: var(--gray-950);
+}
+
+.text-preset-2 {
+  font: var(--figtree-preset-2);
+  font-optical-sizing: var(--font-optical-sizing);
+  font-style: var(--font-style);
+  letter-spacing: var(--letter-spacing);
+  color: var(--gray-500);
+}
+
+.text-preset-3 {
+  font: var(--figtree-preset-3);
+  font-optical-sizing: var(--font-optical-sizing);
+  font-style: var(--font-style);
+  letter-spacing: var(--letter-spacing);
+  color: var(--gray-950);
+}
+
+.text-preset-3-bold {
+  font: var(--figtree-preset-3-bold);
+  font-optical-sizing: var(--font-optical-sizing);
+  font-style: var(--font-style);
+  letter-spacing: var(--letter-spacing);
+  color: var(--gray-950);
+}
+
+/* global styles */
+body {
+  background-color: var(--yellow);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.container {
+  grid-area: 1/1;
+  justify-self: center;
+}
+
+footer {
+  align-self: end;
+  grid-area: 1/1;
+  margin-bottom: 20px;
+}
+
+/* card container */
+.card-container {
+  max-width: 384px;
+  max-height: 522px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-950);
+  border-radius: 20px;
+  padding: var(--space-300);
+  display: grid;
+  gap: var(--space-300);
+  box-shadow: var(--space-100) var(--space-100) var(--gray-950);
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 16px 16px var(--gray-950);
+  }
+}
+/* hero */
+.card-hero img {
+  border-radius: 10px;
+}
+/* content content  */
+.card-content {
+  display: grid;
+  gap: var(--space-150);
+  & .card-tag {
+    background-color: var(--yellow);
+    width: fit-content;
+    padding: var(--space-50) var(--space-100);
+    border-radius: var(--space-50);
+  }
+  & .card-title a {
+    text-decoration: none;
+    & :hover {
+      color: var(--yellow);
+    }
+  }
+}
+/* author */
+.card-author {
+  display: flex;
+  gap: var(--space-150);
+  & img {
+    width: 32px;
+    height: 32px;
+  }
+  & .author-name {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  .card-container {
+    max-width: 327px;
+    max-height: 501px;
+  }
+  .card-content {
+    & .card-tag,
+    .card-date {
+      font-size: 12px;
+    }
+    & .card-title h1 {
+      font-size: 20px;
+    }
+    & .card-description {
+      font-size: 14px;
+    }
+  }
+}
