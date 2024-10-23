@@ -30,8 +30,10 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
+<!-- TODO: add solution url -->
+
 - Solution URL: [Blog Preview Card]()
-- Live Site URL: [GH Pages]()
+- Live Site URL: [GH Pages](https://ivngzmn.github.io/blog-preview-card/)
 
 ## My process
 
@@ -44,7 +46,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### What I learned
 
-I learned more about box shadows and how simple they are to implement.
+I learned more about box shadows and how simple they are to implement. Also learned to use relative links for assets such as fonts, image for correct deployment to GitHub pages.
 
 ### Continued development
 
