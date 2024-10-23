@@ -30,9 +30,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-<!-- TODO: add solution url -->
-
-- Solution URL: [Blog Preview Card]()
+- Solution URL: [Blog Preview Card](https://www.frontendmentor.io/solutions/blog-preview-card-krQ4_Z6mZx)
 - Live Site URL: [GH Pages](https://ivngzmn.github.io/blog-preview-card/)
 
 ## My process
